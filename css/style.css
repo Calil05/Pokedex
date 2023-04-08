@@ -28,6 +28,7 @@ header{
     background-color: rgb(240, 240, 240);
     padding: 0 2%;
     border-radius: 10px;
+    position: relative;
 }
 
 form{
@@ -63,6 +64,20 @@ input[type=submit]:hover{
 
 .pokemon-box{
     display: flex;
+}
+
+i{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 2px;
+    font-weight: bold;
 }
 
 .pokemon-box-img{
@@ -156,3 +171,42 @@ hr{
     margin-top: 4px;
     margin-bottom: 4px;
 }
+
+.arrow {
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50%;
+  }
+  
+  .arrow:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+  }
+  
+  .left-arrow:before {
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+  
+  .right-arrow:before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  .left-arrow:hover,
+  .right-arrow:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  .left-arrow {
+    left: 20px;
+  }
+  
+  .right-arrow {
+    right: 20px;
+  }

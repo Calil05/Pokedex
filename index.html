@@ -6,6 +6,7 @@
     <title>PokeAPI</title>
 
     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
@@ -16,8 +17,11 @@
     <div class="main">
         <form id="form-pokemon">
             <input type="text" id="search-pokemon" placeholder="Nome ou Id do Pokemon">
-            <input type="submit" value="Procurar">
+            <input type="submit" id="find" value="Procurar">
         </form>
+
+        <i class="material-icons arrow left-arrow" id="prev-arrow">chevron_left</i>
+        <i class="material-icons arrow right-arrow" id="next-arrow">chevron_right</i>
 
         <div class="pokemon-box" id="pokemon-box">
             <div class="pokemon-box-img">

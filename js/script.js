@@ -1,7 +1,49 @@
 const form = document.getElementById('form-pokemon');
 const search = document.getElementById('search-pokemon');
+const subButton = document.getElementById('find');
+
+const nextArrow = document.getElementById('next-arrow');
+const prevArrow = document.getElementById('prev-arrow');
 
 var image = document.querySelector('img');
+
+nextArrow.addEventListener('click', () => {
+
+    if(search.value == 'NaN' || search.value == ""){
+        search.value = '1';
+    }
+
+    let currentData = parseInt(search.value);
+    let nextData = currentData+1;
+
+    if (nextData >= 1011){
+        nextData = 1;
+    }
+
+    let stringData = nextData.toString();
+
+    search.value = stringData;
+    subButton.click();
+});
+
+prevArrow.addEventListener('click', () => {
+
+    if(search.value == 'NaN' || search.value == ""){
+        search.value = '1';
+    }
+
+    let currentData = parseInt(search.value);
+    let prevData = currentData-1;
+
+    if (prevData <= 0){
+        prevData = 1010;
+    }
+
+    let stringData = prevData.toString();  
+
+    search.value = stringData;
+    subButton.click();
+});
 
 form.addEventListener('submit', event => {
     event.preventDefault();
@@ -13,6 +55,8 @@ form.addEventListener('submit', event => {
     .then(response => response.json())
     .then(data => {
         console.log(data);
+
+        search.value = data.id;
 
         var nameFirstLetter = data.name.charAt(0);
         nameFirstLetter = nameFirstLetter.toUpperCase();
@@ -26,6 +70,8 @@ form.addEventListener('submit', event => {
         var type01OtherLetter = type01.slice(1);
         var fullType01 = type01FirstLetter + type01OtherLetter;
 
+        var bar = false;
+
         if (data.types.length == 2){
             var type02 = data.types[1].type.name;
 
@@ -34,7 +80,7 @@ form.addEventListener('submit', event => {
             var type02OtherLetter = type02.slice(1);
             var fullType02 = type02FirstLetter + type02OtherLetter;
 
-            var bar = true;
+            bar = true;
         }
 
         if (data.types[1] == undefined){
@@ -197,7 +243,7 @@ form.addEventListener('submit', event => {
             newId = "0" + stringId;
         }else{
             newId = stringId;
-        }
+        }   
 
         const pokemonInfo = document.getElementById('pokemon-box');
         pokemonInfo.innerHTML = `
@@ -234,5 +280,5 @@ form.addEventListener('submit', event => {
         `
 
     })
-
+ 
 })
