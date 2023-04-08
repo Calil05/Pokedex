@@ -1,0 +1,70 @@
+@media only screen and (max-width: 768px) {
+
+    header{
+        height: 80px;
+    }
+
+    .titulo{
+        font-size: 36px;
+    }
+
+    input[type=submit]{
+        font-size: 16px;
+        text-align: left;
+        padding-right: 10px;
+    }
+
+    .pokemon-box{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pokemon-box-img{
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .info{
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    h2{
+        font-size: 36px;
+    }
+
+    .tipo1, .tipo2, .barra{
+        font-size: 24px;
+    }
+
+    .number, .region, .altura, .peso{
+        font-size: 16px;
+    }
+
+    h3{
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    ul{
+        margin-top: 4px;
+        font-size: 16px;
+    }
+
+    li{
+        display: block;
+        width: 100%;
+    }
+
+    hr{
+        width: 100%;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 120px;
+    background-color: rgb(189, 5, 5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo{    
+    font-family: Montserrat;
+    padding-top: 1%;
+    color: whitesmoke;
+    font-size: 64px;
+}
+
+.main{
+    margin:20px auto;
+    max-width: 1100px;
+    background-color: rgb(240, 240, 240);
+    padding: 0 2%;
+    border-radius: 10px;
+}
+
+form{
+    display: flex;
+    margin: 20px 8px;
+    padding: 16px 20px;
+}
+
+input{
+    font-family: Montserrat;
+    flex: 3;
+    width: 80%;
+    height: 40px;
+    padding-left: 10px;
+}
+
+input[type=submit]{
+    font-family: Poppins;
+    flex: 0.5;
+    height: 40px;
+    padding-left: 10px;
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+input[type=submit]:hover{
+    background-color: rgb(146, 5, 5);
+}
+
+.pokemon-box{
+    display: flex;
+}
+
+.pokemon-box-img{
+    margin-right: 20px;
+}
+
+.info{
+    margin-top: 16px;
+    margin-left: 56px;
+    max-width: 1100px;
+    padding: 0 2%;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+    margin-left: 48px;
+}
+
+h2{
+    font-family: Montserrat;
+    font-size: 48px;
+}
+
+.tipo1{
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: italic;
+    color: #7CFC00;
+}
+
+.tipo2{
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: italic;
+    color: #8A2BE2;
+}
+
+.barra{
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: italic;  
+}
+
+.number{
+    font-family: Poppins;
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+.region{
+    font-family: Poppins;
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+.altura{
+    font-family: Poppins;
+    font-size: 20px;
+    margin-right: 6px;
+    margin-top: 8px; 
+}
+
+.peso{
+    font-family: Poppins;
+    font-size: 20px; 
+    margin-left: 6px;
+    margin-top: 8px; 
+}
+
+h3{
+    font-family: Montserrat;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+ul{
+    margin-top: 8px;
+    font-family: Poppins;
+    font-size: 18px;
+    list-style: none;
+}
+
+li{
+    display: inline-block;
+    width: 40%;
+}
+
+hr{
+    width: 320px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}

@@ -1,0 +1,59 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeAPI</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Pokedex</h1>
+    </header>
+    
+    <div class="main">
+        <form id="form-pokemon">
+            <input type="text" id="search-pokemon" placeholder="Nome ou Id do Pokemon">
+            <input type="submit" value="Procurar">
+        </form>
+
+        <div class="pokemon-box" id="pokemon-box">
+            <div class="pokemon-box-img">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png">
+            </div>
+            
+            <div class="info">
+                <h2>Bulbasaur</h2>
+                <span class="tipo1" id="tipo1">Grass</span>
+                <span class="barra">/</span>
+                <span class="tipo2" id="tipo2">Poison</span>
+                <hr>
+
+                <p class="number">ID: 0001</p>
+                <p class="region">Região: Kanto</p>
+
+                <span class="altura">Altura: 0.7m</span>
+                <span class="peso">Peso: 6.9Kg</span>
+                <hr>
+
+                <ul class="stats">
+                    <h3>Status Base</h3>
+                    <li class="hp">Hp: 45</li>
+                    <li class="sp-attack">SP Atk: 65</li>
+                    <li class="attack">Atk: 49</li>
+                    <li class="sp-defense">SP Def: 65</li>
+                    <li class="defense">Def: 49</li>
+                    <li class="speed">Vel: 45</li> 
+                </ul>
+            </div>  
+            
+        </div>
+
+    </div>
+
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
