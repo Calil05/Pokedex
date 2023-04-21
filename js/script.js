@@ -5,7 +5,41 @@ const subButton = document.getElementById('find');
 const nextArrow = document.getElementById('next-arrow');
 const prevArrow = document.getElementById('prev-arrow');
 
+const shinyButton = document.getElementById('btn-shiny');
+const randButton = document.getElementById('btn-rand');
+
 var image = document.querySelector('img');
+
+var shiny = false
+
+var isShiny = '';
+
+shinyButton.addEventListener('click', () => {
+
+    if(search.value == 'NaN' || search.value == ""){
+        search.value = '1';
+    }
+
+    if (shiny == true){
+        shiny = false;
+        isShiny = '';
+        shinyButton.style.backgroundColor = "#38383821";
+    } else {
+        shiny = true;
+        isShiny = 'shiny/';
+        shinyButton.style.backgroundColor = "rgb(189, 5, 5)";
+    }
+
+    subButton.click();
+});
+
+randButton.addEventListener('click', () => {
+
+    var randPokemon = Math.floor(Math.random() * 1010) + 1;
+    search.value = randPokemon;
+    subButton.click();
+
+})
 
 nextArrow.addEventListener('click', () => {
 
@@ -248,7 +282,7 @@ form.addEventListener('submit', event => {
         const pokemonInfo = document.getElementById('pokemon-box');
         pokemonInfo.innerHTML = `
             <div class="pokemon-box-img">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${isShiny}${data.id}.png">
                 </div>
                 
                 <div class="info">
@@ -274,6 +308,7 @@ form.addEventListener('submit', event => {
                         <li class="defense">Def: ${data.stats[2].base_stat}</li>
                         <li class="speed">Vel: ${data.stats[5].base_stat}</li> 
                     </ul>
+
                 </div>  
                 
             </div>

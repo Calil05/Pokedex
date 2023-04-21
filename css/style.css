@@ -49,13 +49,15 @@ input[type=submit]{
     font-family: Poppins;
     flex: 0.5;
     height: 40px;
-    padding-left: 10px;
+    padding: 0 10px;
     cursor: pointer;
     background-color: rgb(255, 0, 0);
     color: whitesmoke;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    border-width: 1px;
+    border-radius: 3px;
 }
 
 input[type=submit]:hover{
@@ -210,3 +212,47 @@ hr{
   .right-arrow {
     right: 20px;
   }
+
+  .shiny-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+  }
+  
+  .btn-shiny {
+    background-color: #38383821;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .btn-shiny:hover{
+    background-color: rgba(189, 5, 5, 0.623);
+  }
+
+  .btn-rand {
+    background-color: rgb(189, 5, 5);
+    border: none;
+    color: whitesmoke;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 10px;
+    font-family: Poppins;
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+    align-items: center;
+    border: rgb(230, 230, 230);
+    border-radius: 5px;
+}
+
+.btn-rand:hover {
+    background-color: rgb(255, 0, 0);
+}
