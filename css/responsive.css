@@ -69,4 +69,11 @@
         margin-top: 8px;
         margin-bottom: 8px;
     }
+
+    .btn-shiny {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
 }
